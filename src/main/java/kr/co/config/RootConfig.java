@@ -18,7 +18,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @ComponentScan(basePackages = "kr.co.bean")
 @ComponentScan(basePackages = "kr.co.dto")
-@MapperScan(basePackages = "org.zerock.mapper") // <ㅡ 이거 해야 함
+@MapperScan(basePackages = "kr.co.mapper") // <ㅡ 이거 해야 함
 @ComponentScan(basePackages = "kr.co.dao") // <ㅡ 이거 해야 함
 @ComponentScan(basePackages = "org.zerock.service") // <ㅡ 이거 해야 함
 //@ComponentScan(basePackages = "kr.co.controller")
@@ -27,7 +27,7 @@ public class RootConfig {
 	public DataSource dataSource() {
 		HikariConfig hikariConfig = new HikariConfig();
 		hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Seoul&useSSL=false");
+		hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/joo?serverTimezone=Asia/Seoul&useSSL=false");
 		hikariConfig.setUsername("root");
 		hikariConfig.setPassword("1234");
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
