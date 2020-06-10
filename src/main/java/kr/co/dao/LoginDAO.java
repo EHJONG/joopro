@@ -1,5 +1,7 @@
 package kr.co.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -19,4 +21,13 @@ public class LoginDAO implements LoginService{
 		mapper.insertMember(dto);
 	}
 	
+	@Override
+	public boolean checkId(String id) {
+		return mapper.checkId(id);
+	}
+	
+	@Override
+	public String checkPw(String id) {
+		return mapper.checkPw(id);
+	}
 }

@@ -35,13 +35,13 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 
 	@Override
 	protected Filter[] getServletFilters() {
-//		CharacterEncodingFilter en = new CharacterEncodingFilter();
-//		en.setEncoding("UTF-8");
-//		en.setForceEncoding(true);
-//		return new Fileter[] {en};
-		CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
-		encodingFilter.setEncoding("UTF-8");
-		return new Filter[] { encodingFilter };
+		CharacterEncodingFilter en = new CharacterEncodingFilter();
+		en.setEncoding("UTF-8");
+		en.setForceEncoding(true);
+		return new Filter[] {en};
+//		CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
+//		encodingFilter.setEncoding("UTF-8");
+//		return new Filter[] { encodingFilter };
 	}
 
 }
