@@ -6,14 +6,14 @@
 	<title>first</title>
 </head>
 <body>
-	<form action = "go" method = "post">
+	<form action = "login_success" method = "post">
 		이름 : <input type = "text" name= "id"><br>
 		비밀번호 : <input type="password" name= "pw"><br>
 		<button type="submit">확인</button>
-	</form>
-	
-	<form action = "login" method = "post">
-		<button> 로그인 하러 </button>
-	</form>
+	</form>	
 </body>
+
+<script>
+	alert('환영합니다')
+</script>
 </html>

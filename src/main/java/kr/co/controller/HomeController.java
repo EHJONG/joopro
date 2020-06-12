@@ -16,9 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.co.dao.LoginDAO;
 import kr.co.dto.LoginDTO;
 
-/**
- * Handles requests for the application home page.
- */
 @Controller
 public class HomeController {
 
@@ -58,11 +55,11 @@ public class HomeController {
 			model.addAttribute("msg", "아이디가 없습니다");
 			return "login";
 		}
-		System.out.println("dto.getPw() : "+dto.getPw());
 		
 		// 뷰 단에서 입력 한 id의 pw가 맞는지 체크 한다. 맞을 시 true, 틀릴시 false
 		// dto.getPw()는 뷰단에서 입력한 pw , dao.checkPw(dto.getId()))는 뷰 단에서 입력한 id값의 pw를 가져오는 역할을 한다. 
 		if (BCrypt.checkpw(dto.getPw(), dao.checkPw(dto.getId()))) {
+			// 세션을 부여한다.
 			session.setAttribute("login", dto.getId());
 			return "login_success";
 		} else {
