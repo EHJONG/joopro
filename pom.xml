@@ -15,7 +15,7 @@
 		<org.springframework-version>5.1.14.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.8.14</org.aspectj-version>
 		<org.slf4j-version>1.7.30</org.slf4j-version>
-		<com.fasterxml.jackson.core-version>2.10.4</com.fasterxml.jackson.core-version>
+		<com.fasterxml.jackson.core-version>2.10.5.1</com.fasterxml.jackson.core-version>
 		<org.apache.commons-version>2.7.0</org.apache.commons-version>
 	</properties>
 
